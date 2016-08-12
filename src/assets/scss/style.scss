@@ -1,0 +1,114 @@
+/*
+The main SCSS file for everything, yep
+*/
+
+@import "bourbon/_bourbon";
+@import "neat/_neat";
+@import "base/base";
+
+body {
+  margin: 0;
+  padding-top: 5em;
+  background-color: $white;
+}
+
+
+// HEADER
+
+header {
+  background-color: $blue;
+  color: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 1.4em;
+  padding-bottom: 1.4em;
+  border-bottom: 0.3em $blue solid;
+  font-family: $heading-font-family;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+
+  .header_wrapper {
+    @include outer-container;
+  }
+
+
+  #brand {
+float: left;
+font-weight: 600;
+
+  #logo_emphasis {
+    color: $yellow;
+  }
+  }
+
+  nav {
+    float: right;
+    padding-top: 0.15em;
+
+      ul {
+        display: inline-block;
+        margin-left: 0;
+        float: right;
+
+          li {
+            display: inline-block;
+            margin-left: 4em;
+
+            a {
+              color: $white;
+            }
+
+            a:hover {
+              color: $action-color;
+            }
+          }
+      }
+
+
+
+}
+
+h2, li {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+}
+
+
+// MAIN
+
+main {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  @include outer-container;
+}
+
+#call-to-action {
+  padding-top: 5em;
+  padding-bottom: 5em;
+  text-align: center;
+  background-image: url('/assets/images/geometry.png');
+  font-size: 1.5 * $base-font-size;
+
+  strong {
+    color: $blue;
+  }
+
+}
+
+#services {
+  background-color: $yellow;
+  padding: $base-spacing;
+  border-radius: $base-border-radius;
+
+  @media screen and (min-width: $tablet) {
+    @include span-columns(6);
+  }
+
+   @media screen and (max-width: $tablet) {
+     @include span-columns(12);
+   }
+}
