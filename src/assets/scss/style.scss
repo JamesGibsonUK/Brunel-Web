@@ -128,7 +128,7 @@ main {
     }
   }
 
-  p,button {
+  p,button, a{
     font-size: 1.04 * $base-font-size;
     @media screen and (max-width: $mobile) {
       font-size: 1 * $base-font-size;
