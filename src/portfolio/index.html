@@ -1,6 +1,12 @@
 ---
 layout: default
 ---
+<style>
+#portfolio_link {
+  color: #FFDD66;
+}
+</style>
+
 <main>
   <div class="title">
 <h1>Portfolio</h1>
@@ -12,7 +18,7 @@ layout: default
 
 <div class="portfolio">
   {% for portfolio_items in site.portfolio_items %}
-  <div class="portfolio_item" style=" background-image: url({{ portfolio_items.image }})">
+  <div class="portfolio_item wow bounceInUp" style=" background-image: url({{ portfolio_items.image }})">
     <div class="portfolio_item__title">
       <h3>{{ portfolio_items.title }}</h3>
     </div>
@@ -20,7 +26,7 @@ layout: default
       <p>{{ portfolio_items.content }}</p>
     </div>
 
-    <button href=" {{portfolio_item.link }} ">Visit</button>
+    <a class="button" href=" {{portfolio_item.link }}">Visit</a>
   </div>
   {% endfor %}
 </div>

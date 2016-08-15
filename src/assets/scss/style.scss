@@ -5,6 +5,7 @@ The main SCSS file for everything, yep
 @import "bourbon/_bourbon";
 @import "neat/_neat";
 @import "base/base";
+@import "libraries/animate.css";
 
 body {
   margin: 0;
@@ -29,6 +30,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
   right: 0;
   padding-top: 1.4em;
   padding-bottom: 1.4em;
@@ -41,10 +43,21 @@ header {
     @include outer-container;
   }
 
+ ul, li {
+   margin-bottom: 0;
+ }
 
   #brand {
 float: left;
 font-weight: 600;
+
+  a {
+    color: white;
+  }
+
+  a:hover {
+    opacity: 0.9;
+  }
 
   #logo_emphasis {
     color: $yellow;
@@ -68,8 +81,10 @@ font-weight: 600;
               color: $white;
             }
 
+
+
             a:hover {
-              color: $action-color;
+              color: $yellow;
             }
           }
       }
@@ -101,10 +116,24 @@ main {
 
 #call-to-action {
   @include outer-container;
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding-top: 7em;
+  padding-bottom: 10em;
   text-align: center;
-  background-image: url('/assets/images/geometry.png');
+
+  h1 {
+    font-size: 2.5 * $base-font-size;
+
+    @media screen and (max-width: $mobile) {
+      font-size: 1.5 * $base-font-size;
+    }
+  }
+
+  p,button {
+    font-size: 1.04 * $base-font-size;
+    @media screen and (max-width: $mobile) {
+      font-size: 1 * $base-font-size;
+    }
+  }
 
   strong {
     color: $blue;
@@ -116,6 +145,7 @@ main {
   background-color: $yellow;
   padding: $base-spacing;
   border-radius: $base-border-radius;
+  margin-bottom: $base-spacing;
 
   @media screen and (min-width: $tablet) {
     @include span-columns(8);
@@ -156,9 +186,19 @@ main {
   padding-top: 5em;
   padding-bottom: 10em;
 
+  @media screen and (max-width: $mobile) {
+
+    padding-top: 2.5em;
+    padding-bottom: 3em;
+
+  }
   blockquote {
-    font-size: $base-font-size;
-    margin-bottom: 0.2em
+    font-size: 2 * $base-font-size;
+    margin-bottom: 0.2em;
+
+    @media screen and (max-width: $tablet) {
+      font-size: 1.2 * $base-font-size;
+    }
   }
 
   cite {
@@ -187,7 +227,6 @@ main {
   .portfolio_item {
     @include span-columns(6);
     @include omega(2n);
-    margin-right: $base-spacing;
     margin-bottom: $base-spacing;
     min-height: 15em;
     background-size:cover;
@@ -240,7 +279,10 @@ footer {
 
 .blog-archive {
   @include span-columns(8);
-  padding-bottom: 10em;
+
+  @media screen and (max-width: $tablet) {
+    @include span-columns(12);
+  }
 
   ul li {
     margin-bottom: 1.5em;
@@ -266,6 +308,18 @@ opacity: 0.5;
 
 .blog-archive_item_content {
 }
+
+.sidebar {
+  @include span-columns(4);
+  background-color: $yellow;
+  padding: $base-spacing;
+  border-radius: $base-border-radius;
+  margin-bottom: $base-spacing;
+
+  @media screen and (max-width: $tablet) {
+    @include span-columns(12);
+  }
+}
 // OTHER
 
 .advert {
@@ -274,6 +328,7 @@ opacity: 0.5;
   font-size: $base-font-size;
   font-family: $heading-font-family;
   margin-bottom: 0px;
+  margin-top: 5em;
   padding: $base-spacing ;
   text-align:center;
 
@@ -284,4 +339,27 @@ opacity: 0.5;
    strong {
      color: $yellow;
    }
+}
+
+// POST
+
+.post {
+  padding-top: 5em;
+  @include outer-container;
+  max-width: 700px;
+
+  h1 {
+    font-size: $base-font-size * 1.5;
+    color: black;
+  }
+}
+
+// CONTACT
+
+.contact {
+  @include outer-container;
+
+  form {
+    @include span-columns(8);
+  }
 }

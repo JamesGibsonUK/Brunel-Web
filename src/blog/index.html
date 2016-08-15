@@ -1,14 +1,19 @@
 ---
 layout: default
 ---
+<style>
+#blog_link {
+  color: #FFDD66;
+}
+</style>
 
 <main>
 <section id="blog">
-<div class="blog-archive">
+<div class="blog-archive ">
   <ul>
   {% for post in site.posts %}
 
-  <div class="blog-archive_item">
+  <div class="blog-archive_item wow bounceInUp">
   <li>
 
     <a class="blog-archive_item__title" href="{{ post.url }}"> {{ post.title }}</a>
@@ -21,5 +26,13 @@ layout: default
 {% endfor %}
   </ul>
 </div>
+
+<div class="sidebar wow bounceInUp">
+  <h3>About</h3>
+  <p>Brunel Web is a premium web agency that specialises in bespoke web design for small and medium sized businesses.</p>
+  <button>Get in touch</button>
+</div>
 </section>
+
+
 </main>
