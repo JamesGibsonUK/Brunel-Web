@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<main>
+<section id="blog">
+<div class="blog-archive">
+  <ul>
+  {% for post in site.posts %}
+
+  <div class="blog-archive_item">
+  <li>
+
+    <a class="blog-archive_item__title" href="{{ post.url }}"> {{ post.title }}</a>
+        <p class="blog-archive_item__date" >{{ post.date | date: '%B %d, %Y' }}</p>
+    <div class="blog-archive_item_content">
+      {{ post.excerpt }}
+    </div>
+  </li>
+</div>
+{% endfor %}
+  </ul>
+</div>
+</section>
+</main>

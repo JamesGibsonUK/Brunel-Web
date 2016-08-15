@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<main>
+  <div class="title">
+<h1>Portfolio</h1>
+<p>This is a showcase of work delivered by Brunel Web for its clients. </p>
+<button href="/contact">Begin your own web project</button>
+</div>
+
+
+
+<div class="portfolio">
+  {% for portfolio_items in site.portfolio_items %}
+  <div class="portfolio_item" style=" background-image: url({{ portfolio_items.image }})">
+    <div class="portfolio_item__title">
+      <h3>{{ portfolio_items.title }}</h3>
+    </div>
+    <div class="portfolio_item__description">
+      <p>{{ portfolio_items.content }}</p>
+    </div>
+
+    <button href=" {{portfolio_item.link }} ">Visit</button>
+  </div>
+  {% endfor %}
+</div>
+
+
+
+</main>

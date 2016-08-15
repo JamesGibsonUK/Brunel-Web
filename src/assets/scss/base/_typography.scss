@@ -17,13 +17,6 @@ h6 {
   margin: 0 0 $small-spacing;
 }
 
-h1 {
-  font-size: 3 * $base-font-size;
-
-    @media screen and (max-width: $mobile) {
-      font-size: 2 * $base-font-size;
-    }
-}
 
 p {
   margin: 0 0 $small-spacing;
@@ -53,4 +46,11 @@ img,
 picture {
   margin: 0;
   max-width: 100%;
+}
+
+blockquote {
+  color: #262626;
+}
+
+cite {
 }
