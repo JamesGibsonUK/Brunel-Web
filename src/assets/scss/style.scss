@@ -73,6 +73,10 @@ font-weight: 600;
         margin-left: 0;
         float: right;
 
+        @media screen and (max-width: $mobile) {
+          display: none;
+        }
+
           li {
             display: inline-block;
             margin-left: 4em;
@@ -89,7 +93,11 @@ font-weight: 600;
           }
       }
 
-
+#hamburger {
+  @media screen and (min-width: $mobile) {
+    display: none;
+  }
+}
 
 }
 
@@ -100,6 +108,35 @@ h2, li {
 
 }
 
+
+nav#responsive {
+
+  ul li {
+    display: block;
+    text-align: center;
+  }
+
+  ul {
+    float: none;
+  }
+}
+
+
+
+nav#responsive {
+  float: none;
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+
+nav.visible {
+  display: block!important;
+
+  ul {
+    display:block!important;
+  }
+}
 
 // MAIN
 

@@ -1,5 +1,17 @@
 <header>
 
+
+    <nav class="responsive" id="responsive">
+      <ul>
+        <li><a id="portfolio_link"href="/portfolio">Portfolio</a></li>
+        <li><a id="blog_link" href="/blog">Blog</a></li>
+        <li><a id="contact_link" href="/contact">Contact</a></li>
+      </ul>
+
+    </nav>
+
+
+
   <div class="header_wrapper">
     <div id="brand">
       <a href="/"><h2>Brunel <span id="logo_emphasis">Web</span></h2></a>
@@ -11,6 +23,17 @@
         <li><a id="blog_link" href="/blog">Blog</a></li>
         <li><a id="contact_link" href="/contact">Contact</a></li>
       </ul>
+            <i id="hamburger" class="fa fa-bars hamburger" aria-hidden="true"></i>
     </nav>
   </div>
 </header>
+
+
+
+<script type="text/javascript">
+ jQuery(function($){
+    	     $( '.hamburger' ).click(function(){
+    	     $('.responsive').toggleClass('visible')
+    	     })
+        })
+</script>
