@@ -1,5 +1,6 @@
 ---
 title: Freifunk Flengsburg
 image: /assets/images/freifunk.png
+link: http://freifunk-flensburg.de/
 ---
-Frances, a newly qualified teacher of the Alexander Technique, benefited hugely from her bespoke website designed by Brunel Web. As a result of its elegant yet accessible design, her website has attracted new clients and helped to convert existing leads.
+Freifunk is a public wifi network that needed a website to establish itself as an upcoming grassroots project. Colour, flair, and boldness are at the heart of the responsive Freifunk website. Brunel Web launched Freifunk's new website in 2013.

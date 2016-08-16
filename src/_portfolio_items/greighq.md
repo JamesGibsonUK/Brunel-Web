@@ -1,5 +1,6 @@
 ---
 title: Greig HQ
 image: /assets/images/greighq.png
+link: http://greighq.com
 ---
-Gibson Learn is a non-profit, educational website designed to help GCSE and A Level students. A clean, functional design was at the heart of this project, in addition to great search engine optimisation.
+Brunel Web helped James Greig, a freelance film director from London, advertise his work by building a stunning minimalistic website. The site features an intuitive portfolio display and an elegant contact form.
