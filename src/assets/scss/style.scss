@@ -114,10 +114,13 @@ nav#responsive {
   ul li {
     display: block;
     text-align: center;
+    margin-left: 0;
+    margin-bottom: $base-spacing;
   }
 
   ul {
     float: none;
+    margin-bottom: $base-spacing;
   }
 }
 
@@ -136,6 +139,7 @@ nav.visible {
   ul {
     display:block!important;
   }
+
 }
 
 // MAIN
@@ -398,5 +402,11 @@ opacity: 0.5;
 
   form {
     @include span-columns(8);
+    margin-bottom: $base-spacing;
+
+    @media screen and (max-width: $tablet) {
+      @include span-columns(12);
+    }
+
   }
 }
