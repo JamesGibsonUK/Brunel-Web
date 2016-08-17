@@ -301,6 +301,9 @@ a.blog-archive_item__title {
   margin-bottom: 0;
   margin-top: $large-spacing;
   padding: $base-spacing;
+  a {
+    color: $yellow;
+  }
   text-align: center;
   p {
     margin: 0;
