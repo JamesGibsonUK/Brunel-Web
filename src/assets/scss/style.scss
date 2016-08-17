@@ -29,6 +29,7 @@ header {
   @media screen and (max-width: $mobile) {
     margin-bottom: $medium-spacing;
     padding-bottom: 0;
+
   }
   right: 0;
   padding-top: 1.4em;
@@ -186,10 +187,10 @@ main {
   @include outer-container;
   text-align: center;
   padding-top: $large-spacing;
-  padding-bottom: 10em;
+  padding-bottom: $large-spacing;
   @media screen and (max-width: $mobile) {
-    padding-top: 2.5em;
-    padding-bottom: 3em;
+    padding-top: $medium-spacing;
+    padding-bottom: $medium-spacing;
   }
   blockquote {
     font-size: 2 * $base-font-size;
@@ -328,5 +329,9 @@ a.blog-archive_item__title {
     @media screen and (max-width: $tablet) {
        @include span-columns(12);
     }
+  }
+
+  a {
+    color: $yellow;
   }
 }
