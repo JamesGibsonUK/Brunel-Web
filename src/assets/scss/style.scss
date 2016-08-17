@@ -7,7 +7,7 @@ The main SCSS file for everything, yep
 @import "libraries/animate.css";
 body {
   margin: 0;
-  padding-top: 5em;
+  padding-top: $large-spacing;
   background-color: $white;
 }
 @mixin card {
@@ -24,6 +24,7 @@ header {
   top: 0;
   left: 0;
   z-index: 1000;
+  margin-bottom: $large-spacing;
   right: 0;
   padding-top: 1.4em;
   padding-bottom: 1.4em;
@@ -117,10 +118,12 @@ header {
 main {
   padding-left: 0.5em;
   padding-right: 0.5em;
+  padding-top: $large-spacing;
+    background-image: url('/assets/images/geometry.png');
 }
 #company-showcase {
   @include outer-container;
-  padding-bottom: 5em;
+  padding-bottom: $large-spacing;
 }
 #call-to-action {
   @include outer-container;
@@ -178,7 +181,7 @@ main {
 #home-testimonial {
   @include outer-container;
   text-align: center;
-  padding-top: 5em;
+  padding-top: $large-spacing;
   padding-bottom: 10em;
   @media screen and (max-width: $mobile) {
     padding-top: 2.5em;
@@ -203,8 +206,8 @@ main {
 .title {
   @include outer-container;
   text-align: center;
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding-top: $large-spacing;
+  padding-bottom: $large-spacing;
 }
 // PORTFOLIO
 .portfolio {
@@ -251,8 +254,7 @@ footer {
 }
 // BLOG
 #blog {
-  padding-top: 5em;
-  @include outer-container;
+    @include outer-container;
 }
 .blog-archive {
   @include span-columns(8);
@@ -293,7 +295,7 @@ a.blog-archive_item__title {
   font-size: $base-font-size;
   font-family: $heading-font-family;
   margin-bottom: 0;
-  margin-top: 5em;
+  margin-top: $large-spacing;
   padding: $base-spacing;
   text-align: center;
   p {
@@ -305,9 +307,10 @@ a.blog-archive_item__title {
 }
 // POST
 .post {
-  padding-top: 5em;
   @include outer-container;
   max-width: 700px;
+  background-color: $white;
+  @include card;
   h1 {
     font-size: $base-font-size * 1.5;
     color: black;

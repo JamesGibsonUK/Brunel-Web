@@ -16,6 +16,8 @@ $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
+$large-spacing: 5em;
+
 
 // Colors
 $blue: #0D28A3;
@@ -48,3 +50,7 @@ $base-timing: ease;
 
 $mobile: 700px;
 $tablet: 800px;
+
+@media screen and (max-width: $mobile) {
+  $large-spacing: 2.5em;
+}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Future of Bespoke Web Design
+title: Will bespoke web design survive?
 ---
 The quality of website builders has increased considerably since the days of flash-based Wix.com sites. SquareSpace, Weebly, Shopify, and others now allow anyone to create impressive websites - well-designed, responsive sites that can be published for the world to see in minutes. When you also consider the low prices offered by most of these online site builders (e.g. less than $20 for a business site on SquareSpace), it's hard to imagine how web agencies designing many static brochure sites have not been put out of business.
 
