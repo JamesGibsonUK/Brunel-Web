@@ -17,6 +17,7 @@ $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 $large-spacing: 5em;
+$medium-spacing: 3em;
 
 
 // Colors
@@ -50,7 +51,3 @@ $base-timing: ease;
 
 $mobile: 700px;
 $tablet: 800px;
-
-@media screen and (max-width: $mobile) {
-  $large-spacing: 2.5em;
-}
