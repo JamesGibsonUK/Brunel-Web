@@ -1,21 +1,15 @@
 /*
 The main SCSS file for everything, yep
 */
-
 @import "bourbon/_bourbon";
 @import "neat/_neat";
 @import "base/base";
 @import "libraries/animate.css";
-
 body {
   margin: 0;
   padding-top: 5em;
   background-color: $white;
-
 }
-
-
-
 @mixin card {
   border: #EDEDED 2px solid;
   border-radius: $base-border-radius;
@@ -23,7 +17,6 @@ body {
   margin-bottom: 1em;
 }
 // HEADER
-
 header {
   background-color: $blue;
   color: $white;
@@ -39,209 +32,165 @@ header {
   padding-left: 0.5em;
   padding-right: 0.5em;
 
+  #hamburger {
+    text-align: center;
+    @media screen and (min-width: $mobile) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    text-align: center;
+  }
   .header_wrapper {
     @include outer-container;
   }
-
- ul, li {
-   margin-bottom: 0;
- }
-
+  li,
+  ul {
+    margin-bottom: 0;
+  }
   #brand {
-float: left;
-font-weight: 600;
-
-  a {
-    color: white;
+    float: left;
+    font-weight: 600;
+    @media screen and (max-width: $mobile) {
+      text-align: center;
+      float: none;
+      display: inline-block;
+      margin-right: $base-spacing;
+      margin-bottom: $base-spacing;
+    }
+    a {
+      color: white;
+    }
+    a:hover {
+      opacity: 0.9;
+    }
+    #logo_emphasis {
+      color: $yellow;
+    }
   }
-
-  a:hover {
-    opacity: 0.9;
-  }
-
-  #logo_emphasis {
-    color: $yellow;
-  }
-  }
-
   nav {
     float: right;
     padding-top: 0.15em;
-
-      ul {
-        display: inline-block;
+    @media screen and (max-width: $mobile) {
+      width: 100%;
+    }
+    ul.responsive {
+      display: none;
+    }
+    ul.responsive.visible {
+      display: block;
+      float: none;
+      text-align: center;
+      width: 100%;
+      li {
+        display: block;
         margin-left: 0;
-        float: right;
-
-        @media screen and (max-width: $mobile) {
-          display: none;
-        }
-
-          li {
-            display: inline-block;
-            margin-left: 4em;
-
-            a {
-              color: $white;
-            }
-
-
-
-            a:hover {
-              color: $yellow;
-            }
-          }
       }
-
-#hamburger {
-  @media screen and (min-width: $mobile) {
-    display: none;
+    }
+    ul {
+      display: inline-block;
+      margin-left: 0;
+      float: right;
+      @media screen and (max-width: $mobile) {
+        display: none;
+      }
+      li {
+        display: inline-block;
+        margin-left: 4em;
+        a {
+          color: $white;
+        }
+        a:hover {
+          color: $yellow;
+        }
+      }
+    }
+  }
+  h2,
+  li {
+    margin-bottom: 0;
+    margin-top: 0;
   }
 }
-
-}
-
-h2, li {
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-}
-
-
-nav#responsive {
-
-  ul li {
-    display: block;
-    text-align: center;
-    margin-left: 0;
-    margin-bottom: $base-spacing;
-  }
-
-  ul {
-    float: none;
-    margin-bottom: $base-spacing;
-  }
-}
-
-
-
-nav#responsive {
-  float: none;
-  width: 100%;
-  text-align: center;
-  display: none;
-}
-
-nav.visible {
-  display: block!important;
-
-  ul {
-    display:block!important;
-  }
-
-}
-
 // MAIN
-
 main {
   padding-left: 0.5em;
   padding-right: 0.5em;
-
 }
-
 #company-showcase {
   @include outer-container;
   padding-bottom: 5em;
 }
-
 #call-to-action {
   @include outer-container;
   padding-top: 7em;
   padding-bottom: 10em;
   text-align: center;
-
   h1 {
     font-size: 2.5 * $base-font-size;
-
     @media screen and (max-width: $mobile) {
       font-size: 1.5 * $base-font-size;
     }
   }
-
-  p,button, a{
+  a,
+  button,
+  p {
     font-size: 1.04 * $base-font-size;
     @media screen and (max-width: $mobile) {
       font-size: 1 * $base-font-size;
     }
   }
-
   strong {
     color: $blue;
   }
-
 }
-
 #services {
   background-color: $yellow;
   padding: $base-spacing;
   border-radius: $base-border-radius;
   margin-bottom: $base-spacing;
-
   @media screen and (min-width: $tablet) {
-    @include span-columns(8);
+     @include span-columns(8);
   }
-
-   @media screen and (max-width: $tablet) {
+  @media screen and (max-width: $tablet) {
      @include span-columns(12);
-   }
+  }
 }
-
 #home-case-study {
   @include span-columns(4);
   @include omega();
-
-   @media screen and (max-width: $tablet) {
+  @media screen and (max-width: $tablet) {
      @include span-columns(12);
-   }
+  }
 }
-
-
 .case-study {
   border: #EDEDED 2px solid;
   border-radius: $base-border-radius;
-
   .case-study_description {
     margin: $base-spacing;
   }
-
-  .case-study_image  {
+  .case-study_image {
     overflow: hidden;
     border-radius: $base-border-radius;
   }
 }
-
 #home-testimonial {
   @include outer-container;
   text-align: center;
   padding-top: 5em;
   padding-bottom: 10em;
-
   @media screen and (max-width: $mobile) {
-
     padding-top: 2.5em;
     padding-bottom: 3em;
-
   }
   blockquote {
     font-size: 2 * $base-font-size;
     margin-bottom: 0.2em;
-
     @media screen and (max-width: $tablet) {
       font-size: 1.2 * $base-font-size;
     }
   }
-
   cite {
     font-size: $base-font-size;
     color: grey;
@@ -251,40 +200,33 @@ main {
     padding-top: -1em;
   }
 }
-
 .title {
   @include outer-container;
   text-align: center;
   padding-top: 5em;
   padding-bottom: 5em;
 }
-
 // PORTFOLIO
-
 .portfolio {
   @include outer-container;
   padding-bottom: 10em;
-
   .portfolio_item {
     @include span-columns(6);
     @include omega(2n);
     margin-bottom: $base-spacing;
     min-height: 15em;
-    background-size:cover;
+    background-size: cover;
     background-position: center;
     padding: $base-spacing;
     color: $white;
     border-radius: $base-border-radius;
-
     @media screen and (max-width: $tablet) {
-      @include span-columns(12);
+       @include span-columns(12);
     }
-
     button {
       background-color: $white;
       color: $black;
     }
-
     button:hover {
       background-color: $yellow;
     }
@@ -298,9 +240,7 @@ main {
     }
   }
 }
-
 // FOOTER
-
 footer {
   background-color: $black;
   padding: $base-spacing;
@@ -309,104 +249,78 @@ footer {
   font-family: $heading-font-family;
   font-size: 0.4 * $base-font-size;
 }
-
-
 // BLOG
-
 #blog {
   padding-top: 5em;
   @include outer-container;
 }
-
 .blog-archive {
   @include span-columns(8);
-
   @media screen and (max-width: $tablet) {
-    @include span-columns(12);
+     @include span-columns(12);
   }
-
   ul li {
     margin-bottom: 1.5em;
   }
 }
-
 .blog-archive_item {
   @include card;
   background-color: white;
-
 }
-
 a.blog-archive_item__title {
   font-family: $heading-font-family;
- font-size: $base-font-size;
+  font-size: $base-font-size;
 }
-
 .blog-archive_item__date {
-color: $black;
-opacity: 0.5;
-
+  color: $black;
+  opacity: 0.5;
 }
-
-.blog-archive_item_content {
-}
-
+.blog-archive_item_content {}
 .sidebar {
   @include span-columns(4);
   background-color: $yellow;
   padding: $base-spacing;
   border-radius: $base-border-radius;
   margin-bottom: $base-spacing;
-
   @media screen and (max-width: $tablet) {
-    @include span-columns(12);
+     @include span-columns(12);
   }
 }
 // OTHER
-
 .advert {
   background-color: $red;
   color: $white;
   font-size: $base-font-size;
   font-family: $heading-font-family;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   margin-top: 5em;
-  padding: $base-spacing ;
-  text-align:center;
-
-   p {
-     margin: 0;
-   }
-
-   strong {
-     color: $yellow;
-   }
+  padding: $base-spacing;
+  text-align: center;
+  p {
+    margin: 0;
+  }
+  strong {
+    color: $yellow;
+  }
 }
-
 // POST
-
 .post {
   padding-top: 5em;
   @include outer-container;
   max-width: 700px;
-
   h1 {
     font-size: $base-font-size * 1.5;
     color: black;
   }
 }
-
 // CONTACT
-
 .contact {
   @include outer-container;
-
   form {
     @include span-columns(8);
     margin-bottom: $base-spacing;
-
     @media screen and (max-width: $tablet) {
-      @include span-columns(12);
+       @include span-columns(12);
     }
-
   }
 }
