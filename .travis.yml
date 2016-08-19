@@ -1,15 +1,13 @@
 language: ruby
-
 rvm:
-  - 2.2
-  
+ - 2.2
+ - jruby
+ - rbx-2
 install:
 - npm install
 - bundle install
-
 script:
 - gulp build
-
 deploy:
   skip_cleanup: true
 - gulp deploy
