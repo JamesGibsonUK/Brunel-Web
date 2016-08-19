@@ -3,4 +3,4 @@ deployment:
     branch: master
     commands:
       - gulp build
-      - gulp deploy
+      - rsync -av dist/ serverpilot@brunelweb.com:~/apps/brunel-web/public
