@@ -3,4 +3,7 @@ deployment:
     branch: master
     commands:
       - gulp build
+      - ssh serverpilot@brunelweb.com
+      - rm -r apps/brunel-web/public
+      - mkdir apps/brunel-web/public
       - rsync -av dist/ serverpilot@brunelweb.com:~/apps/brunel-web/public
