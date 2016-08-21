@@ -332,6 +332,8 @@ a.blog-archive_item__title {
   @include outer-container;
   form {
     @include span-columns(8);
+    @include card;
+    background-color: #fff;
     margin-bottom: $base-spacing;
     @media screen and (max-width: $tablet) {
        @include span-columns(12);

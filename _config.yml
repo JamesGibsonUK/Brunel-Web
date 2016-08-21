@@ -30,7 +30,7 @@ lsi: false
 limit_posts: 10
 
 # Permalink structure and pagination options
-permalink: /blog/:title.html
+permalink: /blog/:title/
 post_dirs: false
 paginate: 10
 paginate_path: 'page:num'
