@@ -21,6 +21,7 @@ header {
   background-color: $blue;
   color: $white;
   position: fixed;
+  font-weight: 700;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -137,9 +138,8 @@ main {
 #call-to-action {
   @include outer-container;
   margin-bottom: $large-spacing;
-  text-align: center;
   h1 {
-    font-size: 2.5 * $base-font-size;
+    font-size: $large-font-size;
     @media screen and (max-width: $mobile) {
       font-size: 1.5 * $base-font-size;
     }
@@ -151,6 +151,10 @@ main {
     @media screen and (max-width: $mobile) {
       font-size: 1 * $base-font-size;
     }
+  }
+
+  a.button {
+    box-shadow: 0 2px 4px darken($base-background-color, 30%);
   }
   strong {
     color: $blue;
@@ -197,7 +201,7 @@ main {
     padding-bottom: $medium-spacing;
   }
   blockquote {
-    font-size: 2 * $base-font-size;
+    font-size: $medium-font-size;
     margin-bottom: 0.2em;
     @media screen and (max-width: $tablet) {
       font-size: 1.2 * $base-font-size;
@@ -328,9 +332,11 @@ a.blog-archive_item__title {
   }
 }
 // CONTACT
+
 .contact {
   @include outer-container;
-  form {
+
+  .contact_form {
     @include span-columns(8);
     @include card;
     background-color: #fff;
@@ -338,6 +344,7 @@ a.blog-archive_item__title {
     @media screen and (max-width: $tablet) {
        @include span-columns(12);
     }
-  }
 
+
+}
 }

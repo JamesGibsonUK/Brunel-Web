@@ -27,6 +27,7 @@ select {
 select[multiple] {
   background-color: $base-background-color;
   border: $base-border;
+  border-color: #b3b3b3;
   border-radius: $base-border-radius;
   box-shadow: $form-box-shadow;
   box-sizing: border-box;
