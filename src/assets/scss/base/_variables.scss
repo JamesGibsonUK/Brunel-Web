@@ -1,6 +1,7 @@
 // Typography
-$base-font-family: "ff-tisa-web-pro",serif;
-$heading-font-family: "ff-tisa-sans-web-pro",sans-serif;
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
+$base-font-family: 'Montserrat', sans-serif;
+$heading-font-family: 'Montserrat', sans-serif;
 
 // Font Sizes
 $base-font-size: 1.3em;
