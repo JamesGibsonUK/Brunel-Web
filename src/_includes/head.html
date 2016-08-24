@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <title>{% if page.title %}{{site.title}} | {{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
   <!-- CSS -->
@@ -41,6 +41,4 @@
   <!-- RSS -->
   {% feed_meta %}
 
-  <!-- SEO -->
-  {% seo %}
 </head>
